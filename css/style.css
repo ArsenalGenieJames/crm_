@@ -1,0 +1,167 @@
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f2f5;
+    }
+    header {
+      background: #34495e;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    nav {
+      background: #2c3e50;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0;
+    }
+    nav ul li a {
+      display: block;
+      color: white;
+      padding: 1rem 1.5rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    nav ul li a.active, nav ul li a:hover {
+      background: #1abc9c;
+      color: #fff;
+    }
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: white;
+      padding: 1.5rem 2rem;
+      border-radius: 8px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    }
+    section {
+      display: none;
+    }
+    section.active {
+      display: block;
+      animation: fadeIn 0.5s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    h2 {
+      color: #34495e;
+      border-bottom: 2px solid #1abc9c;
+      padding-bottom: 0.3rem;
+    }
+    form {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    label {
+      display: block;
+      margin-top: 0.7rem;
+      font-weight: bold;
+    }
+    input[type=text], input[type=email], input[type=number], select, textarea, input[type=date] {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.2rem;
+      box-sizing: border-box;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 1rem;
+      background: #1abc9c;
+      border: none;
+      color: white;
+      padding: 0.7rem 1.3rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+      grid-column: 1 / -1; /* Make button span full width */
+    }
+    button:hover {
+      background: #16a085;
+    }
+    ul.list {
+      padding-left: 1.2rem;
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      list-style-type: none;
+      padding: 0;
+    }
+    ul.list li {
+      padding: 0.8rem;
+      border-bottom: 1px solid #eee;
+    }
+    ul.list li:last-child {
+      border-bottom: none;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    table th, table td {
+      padding: 0.6rem 0.8rem;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    table th {
+      background: #1abc9c;
+      color: white;
+    }
+    .small-note {
+      font-size: 0.9rem;
+      color: #777;
+    }
+    .dashboard-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .stat-card {
+      flex: 1;
+      min-width: 200px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .stat-card h4 {
+      margin-top: 0;
+      color: #34495e;
+    }
+    .stat-card .number {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #1abc9c;
+    }
+    .success-msg {
+      background-color: #d4edda;
+      color: #155724;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+      display: none;
+    }
